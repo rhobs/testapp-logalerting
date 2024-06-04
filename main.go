@@ -2,8 +2,8 @@ package main
 
 import (
     "time"
-    "log"  
-   
+    "os"
+    "log/slog"   
 )
 
 func main() {
@@ -12,7 +12,10 @@ func main() {
   for {
 	sum++ // repeated forever
         time.Sleep(5 * time.Second)
-        log.Println("Testing logging alerting")
-  }
-
+        logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+        logger.Debug("This is a Debug message")
+        logger.Info("This is a Info message")
+        logger.Warn("This is a Warning message")
+        logger.Error("This is a Error message")
+    }
 }
