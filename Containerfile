@@ -5,6 +5,6 @@ WORKDIR /app
 COPY *.go ./
 COPY . ./
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /testapp-logalerting
 
 CMD ["/testapp-logalerting"]
