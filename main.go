@@ -11,7 +11,7 @@ func main() {
   for {
 	sum++ // repeated forever
         time.Sleep(5 * time.Second)
-        log.Println("Tesing logging alerting")
+        log.Println("Testing logging alerting")
   }
 
 }
