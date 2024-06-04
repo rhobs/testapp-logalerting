@@ -3,7 +3,7 @@ package main
 import (
     "log"
     "time" 
-    //zlog "github.com/rs/zerolog/log"
+    zlog "github.com/rs/zerolog"
    
 )
 
@@ -14,7 +14,7 @@ func main() {
 	sum++ // repeated forever
         time.Sleep(5 * time.Second)
         log.Println("Testing logging alerting")
-        //zlog.print("Testing logging alerting with a structured line")
+        zlog.Println("Testing logging alerting with a structured line")
   }
 
 }
