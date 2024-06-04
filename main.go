@@ -13,9 +13,9 @@ func main() {
 		sum++ // repeated forever
 		time.Sleep(5 * time.Second)
 		logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
-		logger.Debug("This is a Debug message")
-		logger.Info("This is a Info message")
-		logger.Warn("This is a Warning message")
-		logger.Error("This is a Error message")
+		logger.Debug("Nothing to worry about here")
+		logger.Info("Someone might want to look into this")
+		logger.Warn("Someone should probably look into this")
+		logger.Error("Panic")
 	}
 }
