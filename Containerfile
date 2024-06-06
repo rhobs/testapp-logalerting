@@ -1,5 +1,5 @@
 FROM golang:1.22.0
-#ENV GO111MODULE=off
+ENV GO111MODULE=off
 WORKDIR /app
 
 COPY *.go ./
